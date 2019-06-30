@@ -133,10 +133,10 @@
       <direction>0 0 -1</direction>
     </light>
     <state world_name='default'>
-      <sim_time>1161 18000000</sim_time>
-      <real_time>365 825062830</real_time>
-      <wall_time>1501645689 796336030</wall_time>
-      <iterations>348748</iterations>
+      <sim_time>1003 752000000</sim_time>
+      <real_time>192 680615299</real_time>
+      <wall_time>1501920335 501357156</wall_time>
+      <iterations>191482</iterations>
       <model name='New Field'>
         <pose frame=''>3.0414 0.000623 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -194,30 +194,30 @@
         </link>
       </model>
       <model name='newbox'>
-        <pose frame=''>1.5 0 0.25 0 -0 0</pose>
+        <pose frame=''>5.5 0.6 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.5 0 0.25 0 -0 0</pose>
+          <pose frame=''>5.5 0.6 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='newbox_0'>
-        <pose frame=''>3 -1 0.25 0 -0 0</pose>
+        <pose frame=''>5.5 -0.6 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>3 -1 0.25 0 -0 0</pose>
+          <pose frame=''>5.5 -0.6 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='newbox_1'>
-        <pose frame=''>4.5 0.7 0.25 0 -0 0</pose>
+        <pose frame=''>3.5 0 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>4.5 0.7 0.25 0 -0 0</pose>
+          <pose frame=''>3.5 0 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -777,13 +777,13 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-0.353872 1.44882 15.6029 0 1.24979 -0.013639</pose>
+        <pose frame=''>-3.78617 -0.277626 10.3965 -0 0.9778 -0.105647</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
     <model name='newbox'>
-      <pose frame=''>1.48491 0.516271 0.25 0 -0 0</pose>
+      <pose frame=''>5.29376 0.599075 0.25 0 -0 0</pose>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>
@@ -826,7 +826,7 @@
       </link>
     </model>
     <model name='newbox_0'>
-      <pose frame=''>2.86728 0.38716 0.25 0 -0 0</pose>
+      <pose frame=''>5.25622 -0.538575 0.25 0 -0 0</pose>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>
@@ -869,7 +869,7 @@
       </link>
     </model>
     <model name='newbox_1'>
-      <pose frame=''>4.44029 -0.636882 0.25 0 -0 0</pose>
+      <pose frame=''>3.57651 -0.008222 0.25 0 -0 0</pose>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>
