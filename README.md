@@ -47,7 +47,7 @@ Here we copy some of the proceed below:<br>
 ## 3. SIMUROSOT-ROBOCHALLENGE
 ### 3.1 Download this project
 ### 3.2 Add the modles
-In your home directory, Press Ctrl+H to show the hidden directory, then go to gazebo/models sub-directory. Copy the colorbox, models/newbox and models/newfield to this directory.
+In your home directory, Press Ctrl+H to show the hidden directory, then go to gazebo/models sub-directory. Copy the models1/newbox and models1/newfield models1/colorbox to this directory.
 
 ### 3.3 Run the program <br>
 There are two modes of running programs. The first is to run both the server and the client on one machine, and the second is to run the server and client on two machines.The following will explain how to run these two modes:
@@ -118,6 +118,11 @@ This file define the enviroment which include play field and obstacles. It will 
 ## 4.3 More to do
 The given demo is really simple for beginners to start up. You can define more sophisticate function based on "robot.move_cmd" and "robot.turn_cmd" to set. And using "robot.cmd_vel.publish(robot.move_cmd)" to publish you manipulation. Such as simulatanious turn around and moving.
 
+# 5. This game will have two challenges of different difficulty.
+![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/challenge1.png) 
+![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/challenge2.png) 
+## 5.1 How users change their scene information
+You only go to the path .gazebo/models/newbox/materials/textures,then exchange the naming of two images
 
 
  

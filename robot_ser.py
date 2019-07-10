@@ -14,15 +14,15 @@ import struct
 
 class SimServer:
     def __init__(self,filename,world_type=1):
-        # Initialize the ROS node
+      
         rospy.init_node('turtlebot_robot', anonymous=False)
 
-        # Control the movement of the turtlebot
+       
         self.__cmd_vel = rospy.Publisher('cmd_vel_mux/input/navi', Twist, queue_size=10)
 
 
 
-        # Control the loop
+       
         self.isEnd = False
 
         # judge
@@ -37,21 +37,21 @@ class SimServer:
         # Twist
         self.twist = Twist()
 
-        # Tcp configuration
+        # tcp config
         self.tcpSock = socket(AF_INET, SOCK_STREAM)
         self.connection = None
 
-        # Get compressed image of turtlebot
+        # 
         self.comImage_sub = rospy.Subscriber("/camera/rgb/image_raw/compressed", CompressedImage, self.__recv_comImage)
         self.comImage_data = None
 
-        # Get image of turtlebot
+        
         self.image_sub=rospy.Subscriber("/camera/rgb/image_raw",Image,self.__recv_image)
         self.image_data=None
-        # Get initial obstacle location information
+        
         self.state_sub = rospy.Subscriber("/gazebo/model_states", ModelStates, self.__recv_states)
         self.box_pos = None
-        # Get the time of the platform
+        
         self.time_sub = rospy.Subscriber("/clock", Clock, self.__recv_time)
         self.time=None
         #contacts
@@ -70,7 +70,7 @@ class SimServer:
         self.tcpSock.bind(("", port))
         self.tcpSock.listen(1)
         self.connection, addr = self.tcpSock.accept()
-        print "The connection is successful"
+        print "connect successful"
         while not self.isEnd:
             data=""
             try:
@@ -101,7 +101,7 @@ class SimServer:
 
     def publish_twist_to_robot(self, data):
         """
-        Publish twist to a robot
+        
         :param data:
         :return:
         """
@@ -113,7 +113,7 @@ class SimServer:
 
     def send_comImg_to_client(self):
         """
-        Send compressed images to the client
+        
         :param image:
         :return:
         """
@@ -125,7 +125,7 @@ class SimServer:
 
     def send_img_to_client(self):
         """
-        Send images to the client
+     
         :return:
         """
         buff = cStringIO.StringIO()
@@ -136,7 +136,7 @@ class SimServer:
 
     def send_box_pos_to_client(self):
         """
-        Sends the location of the obstacle to the client
+       
         :param box_pos:
         :return:
         """
@@ -148,33 +148,32 @@ class SimServer:
 
     def send_time_to_client(self):
         """
-        Send the time of the platform to the client
+      
         :return:
         """
         buff = cStringIO.StringIO()
         self.time.serialize(buff)
         self.connection.send(buff.getvalue())
 
-'''
+
     def __recv_image(self, data):
         """
-        Receive image and save image
+        
         :param data:
         """
         self.image_data = data
 
     def __recv_comImage(self,data):
         """
-        Receive compressed image and save compressed image
+       
         :param data:
         :return:
         """
         self.comImage_data=data
-'''
 
     def __recv_states(self, model_states):
         """
-        Judge whether the robot reaches the end point and whether it is out of bounds
+    
         :param model_states:
         :return:
         """
@@ -202,11 +201,12 @@ class SimServer:
 
     def __recv_time(self,data):
         """
-        Get the time of the platform and judge if it is timeout
+       
         :param data:
         :return:
         """
         self.time=data
+        #juger
         self.time_now=data.clock.to_time()
         if self.time_begin!=None and (self.time_now-self.time_begin>=180)and not self.isEnd:
             self.isEnd=True
@@ -230,10 +230,10 @@ class SimServer:
         self.tcpSock.close()
 
 
-   #####################################################################################裁判
+   #####################################################################################
     def writeData(self,message):
         """
-        Write the game information of the robot to the file and output it to the terminal
+        
         :param message:
         :return:
         """
@@ -242,21 +242,21 @@ class SimServer:
         print message
 
     def inside(self,postion):
-        #Judge whether the robot is out of bounds
+        
         if postion.x<=6 and postion.x>=-0.05 and postion.y<=1.5 and postion.y>=-1.5:
             return True
         else:
             return False
 
     def successful(self,postion):
-        #Judge whether the game is successful
+        
         if postion.x>5.95 and postion.x<6.05 and postion.y>-0.7 and postion.y<0.7:
             return True
         else:
             return False
 
     def contact(self):
-        #Receive collision information
+        
         udpSerSock = socket(AF_UNIX, SOCK_DGRAM)
         if os.path.exists("/tmp/contacts"):
             os.unlink("/tmp/contacts")

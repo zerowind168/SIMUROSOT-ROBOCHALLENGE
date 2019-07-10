@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="New Field">
+  <model name="RoboCup 09 SPL Field">
     <static>true</static>
     <link name="field">
       <pose>0 0 0.01 0 0 0</pose>
@@ -302,7 +302,31 @@
         </material>
       </visual>
     </link>
-
+    <link name="left_support_triangle_y">
+      <pose>-3.043 -0.7 0.01 0 0 -1.5708</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
     <link name="right_post_y">
       <pose>-3 -0.7 0.41 0 0 0</pose>
       <collision name="collision">
@@ -328,7 +352,31 @@
         </material>
       </visual>
     </link>
-
+    <link name="right_support_triangle_y">
+      <pose>-3.043 0.7 0.01 0 0 -1.5708</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
     <link name="crossbar_y">
       <pose>-3 0 0.785 1.5708 1.5708 0</pose>
       <collision name="collision">
@@ -354,8 +402,54 @@
         </material>
       </visual>
     </link>
-
-
+    <link name="net_y_upper">
+      <pose>-3.055 0 0.610 0 1.5708 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.395 1.4 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.395 1.4 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <link name="net_y_lower">
+      <pose>-3.25 0 0.22 0 -0.785 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.55 1.4 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.55 1.4 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
     <link name="left_post_b">
       <pose>3 0.7 0.4 0.01 0 0</pose>
       <collision name="collision">
@@ -381,7 +475,31 @@
         </material>
       </visual>
     </link>
-   
+    <link name="left_support_triangle_b">
+      <pose>3.043 -0.7 0.01 0 0 1.5708</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
     <link name="right_post_b">
       <pose>3 -0.7 0.41 0 0 0</pose>
       <collision name="collision">
@@ -407,7 +525,31 @@
         </material>
       </visual>
     </link>
-
+    <link name="right_support_triangle_b">
+      <pose>3.043 0.7 0.01 0 0 1.5708</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>0.41 0.41 0.41</scale>
+            <uri>model://robocup09_spl_field/meshes/triangle.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/White</name>
+          </script>
+        </material>
+      </visual>
+    </link>
     <link name="crossbar_b">
       <pose>3 0 0.785 1.5708 1.5708 0</pose>
       <collision name="collision">
@@ -433,7 +575,53 @@
         </material>
       </visual>
     </link>
-    
-    
+    <link name="net_b_upper">
+      <pose>3.055 0 0.610 0 1.5708 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.395 1.4 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.395 1.4 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <link name="net_b_lower">
+      <pose>3.25 0 0.22 0 0.785 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.55 1.4 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.55 1.4 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://robocup09_spl_field/materials/scripts/</uri>
+            <uri>model://robocup09_spl_field/materials/textures/</uri>
+            <name>RoboCup/Net</name>
+          </script>
+        </material>
+      </visual>
+    </link>
   </model>
 </sdf>
