@@ -133,10 +133,10 @@
       <direction>0 0 -1</direction>
     </light>
     <state world_name='default'>
-      <sim_time>1003 752000000</sim_time>
-      <real_time>192 680615299</real_time>
-      <wall_time>1501920335 501357156</wall_time>
-      <iterations>191482</iterations>
+      <sim_time>1596 693000000</sim_time>
+      <real_time>789 379077609</real_time>
+      <wall_time>1501920932 199818715</wall_time>
+      <iterations>784423</iterations>
       <model name='New Field'>
         <pose frame=''>3.0414 0.000623 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -194,30 +194,60 @@
         </link>
       </model>
       <model name='newbox'>
-        <pose frame=''>5.5 0.6 0.25 0 -0 0</pose>
+      <pose frame=''>4.09915225977 -1.01215152149 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>5.5 0.6 0.25 0 -0 0</pose>
+        <pose frame=''>4.09915225977 -1.01215152149 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='newbox_0'>
-        <pose frame=''>5.5 -0.6 0.25 0 -0 0</pose>
+      <pose frame=''>1.37451496682 0.0615300531099 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>5.5 -0.6 0.25 0 -0 0</pose>
+        <pose frame=''>1.37451496682 0.0615300531099 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='newbox_1'>
-        <pose frame=''>3.5 0 0.25 0 -0 0</pose>
+      <pose frame=''>3.13684099081 -0.30202026622 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>3.5 0 0.25 0 -0 0</pose>
+        <pose frame=''>3.13684099081 -0.30202026622 0.25 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='newbox_2'>
+      <pose frame=''>2.69717725772 1.19322232052 0.25 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+        <pose frame=''>2.69717725772 1.19322232052 0.25 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='newbox_3'>
+      <pose frame=''>1.96279206289 -0.174535196896 0.25 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+        <pose frame=''>1.96279206289 -0.174535196896 0.25 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='newbox_4'>
+      <pose frame=''>1.52553370697 0.99854570849 0.25 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+        <pose frame=''>1.52553370697 0.99854570849 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -316,7 +346,7 @@
           </material>
         </visual>
         <visual name='endline_1'>
-          <pose frame=''>-3 0 0.011 0 -0 0</pose>
+          <pose frame=''>-3 0 0.001 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -332,7 +362,7 @@
           </material>
         </visual>
         <visual name='endline_2'>
-          <pose frame=''>3 0 0.011 0 -0 0</pose>
+          <pose frame=''>3 0 0.001 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -348,7 +378,7 @@
           </material>
         </visual>
         <visual name='halfway_line'>
-          <pose frame=''>0 0 0.011 0 -0 0</pose>
+          <pose frame=''>0 0 0.001 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -460,7 +490,7 @@
           </material>
         </visual>
         <visual name='penalty_b'>
-          <pose frame=''>-1.2 0 0.01 0 -0 0</pose>
+          <pose frame=''>-1.2 0 0.00 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -476,7 +506,7 @@
           </material>
         </visual>
         <visual name='penalty_y'>
-          <pose frame=''>1.2 0 0.01 0 -0 0</pose>
+          <pose frame=''>1.2 0 0.00 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -492,7 +522,7 @@
           </material>
         </visual>
         <visual name='center_point'>
-          <pose frame=''>0 0 0.01 0 -0 0</pose>
+          <pose frame=''>0 0 0.00 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -508,7 +538,7 @@
           </material>
         </visual>
         <visual name='center_circle'>
-          <pose frame=''>0 0 -0.01 0 -0 0</pose>
+          <pose frame=''>0 0 -0.025 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
@@ -777,7 +807,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-3.78617 -0.277626 10.3965 -0 0.9778 -0.105647</pose>
+        <pose frame=''>-4.86129 0.094285 10.5346 0 0.857801 -0.169643</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -870,6 +900,135 @@
     </model>
     <model name='newbox_1'>
       <pose frame=''>3.57651 -0.008222 0.25 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://newbox/meshes/mesh.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='my_contact' type='contact'>
+        <plugin name="my_plugin" filename="libcontact.so"/>
+          <contact>
+            <collision>collision</collision>
+          </contact>
+        </sensor>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <model name='newbox_2'>
+      <pose frame=''>2.97822 0.493845 0.25 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://newbox/meshes/mesh.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='my_contact' type='contact'>
+        <plugin name="my_plugin" filename="libcontact.so"/>
+          <contact>
+            <collision>collision</collision>
+          </contact>
+        </sensor>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <model name='newbox_3'>
+      <pose frame=''>2.96049 -0.673594 0.25 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://newbox/meshes/mesh.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='my_contact' type='contact'>
+        <plugin name="my_plugin" filename="libcontact.so"/>
+          <contact>
+            <collision>collision</collision>
+          </contact>
+        </sensor>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <model name='newbox_4'>
+      <pose frame=''>1.5413 -0.072499 0.25 0 -0 0</pose>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>

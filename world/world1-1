@@ -194,30 +194,30 @@
         </link>
       </model>
       <model name='newbox'>
-        <pose frame=''>1.5 0.6 0.25 0 -0 0</pose>
+      <pose frame=''>1.5 0.299403014963 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.5 0.6 0.25 0 -0 0</pose>
+        <pose frame=''>1.5 0.299403014963 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='newbox_0'>
-        <pose frame=''>3 -0.67 0.25 0 -0 0</pose>
+      <pose frame=''>3.0 -1.20712797201 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>3 -0.67 0.25 0 -0 0</pose>
+        <pose frame=''>3.0 -1.20712797201 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='newbox_1'>
-        <pose frame=''>4.5 0.2 0.25 0 -0 0</pose>
+      <pose frame=''>4.5 1.24101769929 0.25 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>4.5 0.2 0.25 0 -0 0</pose>
+        <pose frame=''>4.5 1.24101769929 0.25 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -316,7 +316,7 @@
           </material>
         </visual>
         <visual name='endline_1'>
-          <pose frame=''>-3 0 0.011 0 -0 0</pose>
+          <pose frame=''>-3 0 0.001 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -332,7 +332,7 @@
           </material>
         </visual>
         <visual name='endline_2'>
-          <pose frame=''>3 0 0.011 0 -0 0</pose>
+          <pose frame=''>3 0 0.001 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -348,7 +348,7 @@
           </material>
         </visual>
         <visual name='halfway_line'>
-          <pose frame=''>0 0 0.011 0 -0 0</pose>
+          <pose frame=''>0 0 0.001 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -460,7 +460,7 @@
           </material>
         </visual>
         <visual name='penalty_b'>
-          <pose frame=''>-1.2 0 0.01 0 -0 0</pose>
+          <pose frame=''>-1.2 0 0.00 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -476,7 +476,7 @@
           </material>
         </visual>
         <visual name='penalty_y'>
-          <pose frame=''>1.2 0 0.01 0 -0 0</pose>
+          <pose frame=''>1.2 0 0.00 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -492,7 +492,7 @@
           </material>
         </visual>
         <visual name='center_point'>
-          <pose frame=''>0 0 0.01 0 -0 0</pose>
+          <pose frame=''>0 0 0.00 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -508,7 +508,7 @@
           </material>
         </visual>
         <visual name='center_circle'>
-          <pose frame=''>0 0 -0.01 0 -0 0</pose>
+          <pose frame=''>0 0 -0.025 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>

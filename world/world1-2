@@ -492,7 +492,7 @@
           </material>
         </visual>
         <visual name='center_point'>
-          <pose frame=''>0 0 0.01 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <cylinder>
@@ -508,7 +508,7 @@
           </material>
         </visual>
         <visual name='center_circle'>
-          <pose frame=''>0 0 -0.01 0 -0 0</pose>
+          <pose frame=''>0 0 -0.025 0 -0 0</pose>
           <cast_shadows>0</cast_shadows>
           <geometry>
             <mesh>
