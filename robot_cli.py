@@ -78,27 +78,6 @@ class robot_cli:
                 print msg
                 self.isEnd=True
 
-    def get_box_pos(self):
-        """
-        :return:
-        """
-        if not self.isEnd:
-            try:
-                message = b"box"
-                self.tcpCliSock.send(message)
-                flag=self.tcpCliSock.recv(4)
-                length=struct.unpack('i',flag)[0]
-                data=""
-                while len(data)<length:
-                    data+=self.tcpCliSock.recv(length)
-                try:
-                    self.box_pos.deserialize(data)
-                    return self.box_pos
-                except genpy.DeserializationError:
-                    print rospy.loginfo("deserialize box_pos failed!")
-            except Exception,msg:
-                print msg
-                self.isEnd = True
 
     def get_time(self):
         """

@@ -7,8 +7,11 @@ OS: ubuntu 16.04<br>
 ROS: Kinectic<br>
 
 ##### :exclamation:You must not install the ROS on a(any) Virtual Machine, otherwise there will be a lot of problems.:exclamation:
-
-## 1. Install the ROS:<br>
+## 1. Notice:
+This competition mainly uses vision to avoid obstacles.In the game, you need to adjust the position information of the car through vision.
+Summary:
+You can only get images from the platform server, and then send commands to the server to control the car.
+## 2. Install the ROS:<br>
 You can go to:  http://wiki.ros.org/kinetic/Installation/Ubuntu
 for how to download the ROS Kinetic version.<br>
 Here we copy some of the proceed below:<br>
@@ -38,39 +41,39 @@ Here we copy some of the proceed below:<br>
     source ~/.bashrc
     ```
 
-## 2. Turtlebot & Gazebo Package
+## 3. Turtlebot & Gazebo Package
 
     ```
     sudo apt-get install ros-kinetic-turtlebot-gazebo
     ```
    
-## 3. SIMUROSOT-ROBOCHALLENGE
-### 3.1 Download this project
-### 3.2 Add the modles
+## 4. SIMUROSOT-ROBOCHALLENGE
+### 4.1 Download this project
+### 4.2 Add the modles
 In your home directory, Press Ctrl+H to show the hidden directory, then go to gazebo/models sub-directory. Copy the models1/newbox and models1/newfield models1/colorbox to this directory.
 
-### 3.3 Run the program <br>
+### 4.3 Run the program <br>
 There are two modes of running programs. The first is to run both the server and the client on one machine, and the second is to run the server and client on two machines.The following will explain how to run these two modes:
-#### 3.3.1 Run both the server and the client on one machine:
-##### 3.3.1.1 Open a terminal and transfer to the current path(~/ros_scripts/)
-##### 3.3.1.2 When you run the robot_ser.py file, enter a file name to record the game information.
+#### 4.3.1 Run both the server and the client on one machine:
+##### 4.3.1.1 Open a terminal and transfer to the current path(~/ros_scripts/)
+##### 4.3.1.2 When you run the robot_ser.py file, enter a file name to record the game information.
    ```
    export LD_LIBRARY_PATH=~/ros_scripts/plugin:$LD_LIBRARY_PATH
    roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/username/ros_scripts/world/world1-1（world_file:=your   world_file's path
    python robot_ser.py 
    python how_to_run.py 
    ```
-#### 3.3.2 Run the server and client on two machines:
-##### 3.3.2.1 Suppose you choose A computer as the server and B computer as the client.
-##### 3.3.2.2 Download this project on both computer.On the client side, change the ip in the robot_cli.py and clock_cli.py files to the IP address of the A computer.
-##### 3.3.2.3 On the Server 
+#### 4.3.2 Run the server and client on two machines:
+##### 4.3.2.1 Suppose you choose A computer as the server and B computer as the client.
+##### 4.3.2.2 Download this project on both computer.On the client side, change the ip in the robot_cli.py and clock_cli.py files to the IP address of the A computer.
+##### 4.3.2.3 On the Server 
    ```
    export LD_LIBRARY_PATH=~/ros_scripts/plugin:$LD_LIBRARY_PATH
    roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/username/ros_scripts/world/world1-1（world_file:=your   world_file's path
    python clock_ser.py
    python robot_ser.py
    ```
-##### 3.3.2.4 On the client
+##### 4.3.2.4 On the client
    ```
    roscore
    python clock_cli.py
@@ -79,8 +82,8 @@ There are two modes of running programs. The first is to run both the server and
   
 If you see the figure as follow, you are success.
 ![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/roboc.png) 
-## 4. File Explain 
-### 4.1 The file structure 
+## 5. File Explain 
+### 5.1 The file structure 
 
 ./ros_scripts<br>
 ├── how_to_run.py<br>
@@ -92,7 +95,7 @@ If you see the figure as follow, you are success.
 ├── judge.py<br>
 └── world.world<br>
 
-## 4.2 detail explain for the file
+## 5.2 detail explain for the file
 #### 1. how_to_run.py
 This script define how the turtlebot act. There is only one function "Run" in this script, The function has a "robot" parameter, which is an object of class "Robot".
 #### 2. robot.py
@@ -115,10 +118,10 @@ This script is used to record the robot's game time and determine whether the ga
 #### 4. world.world
 This file define the enviroment which include play field and obstacles. It will be called by "start.py" script. We have defined some more testing enviroment in the "world" sub-directory. You can use them for testing. 
 
-## 4.3 More to do
+## 5.3 More to do
 The given demo is really simple for beginners to start up. You can define more sophisticate function based on "robot.move_cmd" and "robot.turn_cmd" to set. And using "robot.cmd_vel.publish(robot.move_cmd)" to publish you manipulation. Such as simulatanious turn around and moving.
 
-# 5. This game will have two challenges of different difficulty.
+# 6. This game will have two challenges of different difficulty.
 ![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/challenge1.png) 
 ![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/challenge2.png) 
 ## 5.1 How users change their scene information

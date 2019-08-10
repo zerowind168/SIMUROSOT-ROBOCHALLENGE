@@ -104,42 +104,4 @@ class Robot:
         """
         return self.my_robot.get_comImage()
 
-    # def __recv_image(self, data):
-    #     """
-    #     
-    #     :param data:
-    #     """
-    #     cv_image = None
-    #     try:
-    #         cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
-    #
-    #     except CvBridgeError as e:
-    #         print(e)
-    #     self.image_received = True
-    #     self.image = cv_image
-    #     gray_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
-    #     ret, self.binary_image = cv2.threshold(gray_image, 127, 255, cv2.THRESH_BINARY)
 
-    def get_box_position(self):
-        """
-        :return: list of obstacle coordinate
-        """
-        # return self.box_pos
-        return self.my_robot.get_box_pos()
-
-    # def __recv_states(self, model_states):
-    #     reg = 'newbox*'
-    #     nameRe = re.compile(reg)
-    #     res = []
-    #     for i in xrange(len(model_states.name)):
-    #         if nameRe.match(model_states.name[i]):
-    #             x = float(model_states.pose[i].position.x)
-    #             y = float(model_states.pose[i].position.y)
-    #             res.append((x, y))
-    #     self.box_pos = res
-    #     pass
-
-    #def __shutdown(self):
-        #rospy.loginfo("Stop the turtlebot")
-        #self.__cmd_vel.publish(Twist())
-        #rospy.sleep(1)
