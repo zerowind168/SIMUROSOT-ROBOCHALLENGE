@@ -59,13 +59,22 @@ There are two modes of running programs. The first is to run both the server and
 ##### 4.3.1.2 When you run the robot_ser.py file, enter a file name to record the game information.
    ```
    export LD_LIBRARY_PATH=~/ros_scripts/plugin:$LD_LIBRARY_PATH
-   roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/username/ros_scripts/world/world1-1（world_file:=your   world_file's path
-   python robot_ser.py 
-   python how_to_run.py 
+   roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/username/ros_scripts/world/world1-1
    ```
 if you have trouble run the roslaunch, try to run the following first : 
    ```
 roslaunch turtlebot_gazebo turtlebot_world.launch
+   ```
+   here username should be replaced with your username. And you can run another world_file just by replace the world1-1 to another one.
+   ```
+   open a terminal and run : 
+   ```
+   python robot_ser.py
+   ```
+   you will see a prompt >>, you can input a string which is a file name , and the log will be saved to this file.
+   then you can open another terminal and run:
+   ```
+   python how_to_run.py 
    ```
 
 #### 4.3.2 Run the server and client on two machines:
@@ -74,7 +83,10 @@ roslaunch turtlebot_gazebo turtlebot_world.launch
 ##### 4.3.2.3 On the Server 
    ```
    export LD_LIBRARY_PATH=~/ros_scripts/plugin:$LD_LIBRARY_PATH
-   roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/username/ros_scripts/world/world1-1（world_file:=your   world_file's path
+   roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/username/ros_scripts/world/world1-1
+   ```
+   here username should be replaced with your username. And you can run another world_file just by replace the world1-1 to another one.
+   ```
    python clock_ser.py
    python robot_ser.py
    ```
