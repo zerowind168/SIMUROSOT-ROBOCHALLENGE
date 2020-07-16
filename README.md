@@ -140,8 +140,12 @@ The given demo is really simple for beginners to start up. You can define more s
 # 6. This game will have two challenges of different difficulty.
 ![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/challenge1.png) 
 ![image](https://github.com/zerowind168/SIMUROSOT-ROBOCHALLENGE/blob/master/challenge2.png) 
-## 5.1 How users change their scene information
+## 6.1 How users change their scene information
 You only go to the path .gazebo/models/newbox/materials/textures,then exchange the naming of two images
+
+# 7. Future Work
+The compatible is not good. The platform can only run on gazebo7.0.0, and if you update the gazebo, some problem will occur. 
+So for the future, the enviroment should run on a more varity platform. For different OS, ROS and GAZEBO version.
 
 
  
