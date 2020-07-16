@@ -12,8 +12,8 @@ def Run(robot):
     comImage=robot.get_comImage()
     cv2.imwrite("comImage.jpg",comImage)
     #Get obstacle coordinates and print the information
-    pos=robot.get_box_position()
-    print pos
+    #pos=robot.get_box_position()
+    #print pos
     #Send commands to the robot
     rate=rospy.Rate(10)
     twist=Twist()
