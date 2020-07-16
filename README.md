@@ -66,7 +66,6 @@ if you have trouble run the roslaunch, try to run the following first :
 roslaunch turtlebot_gazebo turtlebot_world.launch
    ```
    here username should be replaced with your username. And you can run another world_file just by replace the world1-1 to another one.
-   ```
    open a terminal and run : 
    ```
    python robot_ser.py
