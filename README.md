@@ -44,7 +44,7 @@ Here we copy some of the proceed below:<br>
 ## 3. Turtlebot & Gazebo Package
 
     ```
-    sudo apt-get install ros-kinetic-turtlebot-gazebo
+       sudo apt-get install ros-kinetic-turtlebot-gazebo
     ```
    
 ## 4. SIMUROSOT-ROBOCHALLENGE
@@ -64,7 +64,7 @@ There are two modes of running programs. The first is to run both the server and
    python how_to_run.py 
    ```
 if you have trouble run the roslaunch, try to run the following first : 
-   ```   ```
+   ```
 roslaunch turtlebot_gazebo turtlebot_world.launch
    ```
 
