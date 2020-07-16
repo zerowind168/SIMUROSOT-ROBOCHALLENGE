@@ -63,6 +63,11 @@ There are two modes of running programs. The first is to run both the server and
    python robot_ser.py 
    python how_to_run.py 
    ```
+if you have trouble run the roslaunch, try to run the following first : 
+   ```   ```
+roslaunch turtlebot_gazebo turtlebot_world.launch
+   ```
+
 #### 4.3.2 Run the server and client on two machines:
 ##### 4.3.2.1 Suppose you choose A computer as the server and B computer as the client.
 ##### 4.3.2.2 Download this project on both computer.On the client side, change the ip in the robot_cli.py and clock_cli.py files to the IP address of the A computer.
