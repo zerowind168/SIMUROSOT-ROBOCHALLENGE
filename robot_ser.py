@@ -133,7 +133,17 @@ class SimServer:
         print len(buff.getvalue())
         self.connection.sendall(buff.getvalue())
 
-
+    def send_box_pos_to_client(self):
+         """
+        
+         :param box_pos:
+         :return:
+         """
+         buff = cStringIO.StringIO()
+         self.box_pos.serialize(buff)
+         flag=struct.pack('i',len(buff.getvalue()))
+         self.connection.send(flag)
+         self.connection.sendall(buff.getvalue())
 
     def send_time_to_client(self):
         """
@@ -186,7 +196,7 @@ class SimServer:
                     self.writeData("successful:time=" + str(self.time_now - self.time_begin))
                 if (not self.isEnd) and self.inside(self.robot_pos_last) and (not self.inside(self.robot_pos_now)):
                     self.writeData("outside:" + str(self.time_now))
-        #self.box_pos = res
+        self.box_pos = res
 
     def __recv_time(self,data):
         """
